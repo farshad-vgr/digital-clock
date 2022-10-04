@@ -11,13 +11,12 @@ body {
 }
 
 .clock {
-    min-width: 700px;
-    max-width: 70%;
-    margin: 25vh auto;
+    min-width: 300px;
+    max-width: 90%;
+    margin: 20px auto;
     text-align: center;
     background-color: black;
-    box-shadow: 0 0 2rem 1rem aqua inset;
-    outline: none;
+    box-shadow: 0 0 0.5rem 0.2rem aqua inset;
     border-radius: 1rem;
     cursor: default;
 }
@@ -25,12 +24,74 @@ body {
 .display {
     display: flex;
     justify-content: space-between;
-    padding: 50px;
+    padding: 10px;
     color: cyan;
-    font-size: 5rem;
+    font-size: 2rem;
     font-family: 'orbitron', sans-serif;
+    filter: drop-shadow(0 0 7px aqua);
 }
 
 .display span {
     width: 20%;
+}
+
+/*------------------------------- responsive with Bootstrap 5 breakpoints ------------------------------*/
+@media (min-width: 576px) {
+    .clock {
+        max-width: 80%;
+        box-shadow: 0 0 0.7rem 0.4rem aqua inset;
+    }
+
+    .display {
+        padding: 20px;
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .clock {
+        max-width: 75%;
+        box-shadow: 0 0 0.8rem 0.5rem aqua inset;
+    }
+
+    .display {
+        padding: 25px;
+        font-size: 3.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .clock {
+        max-width: 70%;
+        box-shadow: 0 0 1rem 0.8rem aqua inset;
+    }
+
+    .display {
+        padding: 30px;
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .clock {
+        max-width: 65%;
+        box-shadow: 0 0 1.5rem 0.9rem aqua inset;
+    }
+
+    .display {
+        padding: 35px;
+        font-size: 4.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .clock {
+        max-width: 60%;
+        box-shadow: 0 0 1.5rem 1rem aqua inset;
+    }
+
+    .display {
+        padding: 40px;
+        font-size: 5rem;
+    }
 }
