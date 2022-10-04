@@ -8,38 +8,83 @@
 
 body {
     background-color: black;
+    cursor: default;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/*----------------------------------- display digital clock part ------------------------------------*/
 .clock {
     min-width: 300px;
     max-width: 90%;
     margin: 20px auto;
     text-align: center;
-    background-color: black;
-    box-shadow: 0 0 0.5rem 0.2rem aqua inset;
+    box-shadow: 0 0 0.5rem 0.2rem rgb(0,255,255) inset;
     border-radius: 1rem;
-    cursor: default;
 }
 
 .display {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    color: cyan;
+    color: rgb(0,255,255);
     font-size: 2rem;
     font-family: 'orbitron', sans-serif;
-    filter: drop-shadow(0 0 7px aqua);
+    filter: drop-shadow(0 0 7px rgb(0,255,255));
 }
 
 .display span {
     width: 20%;
 }
 
+/*----------------------------------------- options for digital clock part -------------------------------------*/
+.options {
+    display: flex;
+    min-width: 300px;
+    max-width: 90%;
+    justify-content: center;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*---------------------------- color option part ----------------------------*/
+.options .color {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 1rem;
+    color: black;
+    background-color: lightgrey;
+}
+
+.options .color div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 210px;
+    max-width: 90%;
+    padding: 5px;
+}
+
+.options .color div label {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
 /*------------------------------- responsive with Bootstrap 5 breakpoints ------------------------------*/
 @media (min-width: 576px) {
     .clock {
+        min-width: 500px;
         max-width: 80%;
-        box-shadow: 0 0 0.7rem 0.4rem aqua inset;
+        box-shadow: 0 0 0.7rem 0.4rem rgb(0,255,255) inset;
     }
 
     .display {
@@ -50,8 +95,8 @@ body {
 
 @media (min-width: 768px) {
     .clock {
-        max-width: 75%;
-        box-shadow: 0 0 0.8rem 0.5rem aqua inset;
+        min-width: 600px;
+        box-shadow: 0 0 0.8rem 0.5rem rgb(0,255,255) inset;
     }
 
     .display {
@@ -62,8 +107,8 @@ body {
 
 @media (min-width: 992px) {
     .clock {
-        max-width: 70%;
-        box-shadow: 0 0 1rem 0.8rem aqua inset;
+        min-width: 700px;
+        box-shadow: 0 0 1rem 0.8rem rgb(0,255,255) inset;
     }
 
     .display {
@@ -74,8 +119,8 @@ body {
 
 @media (min-width: 1200px) {
     .clock {
-        max-width: 65%;
-        box-shadow: 0 0 1.5rem 0.9rem aqua inset;
+        min-width: 800px;
+        box-shadow: 0 0 1.5rem 0.9rem rgb(0,255,255) inset;
     }
 
     .display {
@@ -86,8 +131,8 @@ body {
 
 @media (min-width: 1400px) {
     .clock {
-        max-width: 60%;
-        box-shadow: 0 0 1.5rem 1rem aqua inset;
+        min-width: 900px;
+        box-shadow: 0 0 1.5rem 1rem rgb(0,255,255) inset;
     }
 
     .display {

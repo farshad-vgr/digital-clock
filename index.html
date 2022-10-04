@@ -19,11 +19,44 @@
 
 <body>
 
-    <div class="clock">
+    <main class="container">
 
-        <div class="display"></div>
+        <section id="clock" class="clock">
 
-    </div>
+            <div id="display" class="display"></div>
+
+        </section>
+
+        <section id="options" class="options">
+
+            <div id="color" class="color">
+
+                <h2>Color Selector</h2>
+                <br>
+
+                <h3>Selected color is<span id="colorOutput">: rgb(<span style="color: red">0</span>, <span style="color: green">255</span>, <span style="color: blue">255</span>)</span></h3>
+                <br>
+
+                <div>
+                    <label for="rangeRed" style="color: red">red:</label>
+                    <input id="rangeRed" type="range" min="0" max="255" value="0">
+                </div>
+
+                <div>
+                    <label for="rangeGreen" style="color: green">green:</label>
+                    <input id="rangeGreen" type="range" min="0" max="255" value="255">
+                </div>
+
+                <div>
+                    <label for="rangeBlue" style="color: blue">blue:</label>
+                    <input id="rangeBlue" type="range" min="0" max="255" value="255">
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <script src="javascript.js"></script>
 
