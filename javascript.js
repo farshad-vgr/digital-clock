@@ -6,6 +6,7 @@ const selectedColor = document.getElementById('colorOutput');
 const rangeRed = document.getElementById('rangeRed');
 const rangeGreen = document.getElementById('rangeGreen');
 const rangeBlue = document.getElementById('rangeBlue');
+const randomColor = document.getElementById('randomColor');
 
 rangeRed.addEventListener('input', changeColor);
 rangeGreen.addEventListener('input', changeColor);
@@ -19,7 +20,7 @@ setInterval(() => {
     let minutes = time.getMinutes();
     let hours = time.getHours();
     let day = 'AM';
-    
+
     if (hours >= 22) {
         day = 'PM';
         hours = hours - 12;
@@ -60,4 +61,23 @@ function changeColor() {
     display.style.color = color;
     display.style.filter = `drop-shadow(0 0 7px ${color})`;
     selectedColor.innerHTML = `: rgb(<span style="color: red">${red}</span>, <span style="color: green">${green}</span>, <span style="color: blue">${blue}</span>)`;
+    return color;
 }
+
+randomColor.addEventListener('click', function () {
+    rangeRed.value = Math.floor(Math.random() * 255);
+    rangeGreen.value = Math.floor(Math.random() * 255);
+    rangeBlue.value = Math.floor(Math.random() * 255);
+
+    changeColor();
+    randomColor.style.background = changeColor();
+
+    let rangeAverage = (Number(rangeRed.value) + Number(rangeGreen.value) + Number(rangeBlue.value))/3;
+    if (rangeAverage < 100) {
+        randomColor.style.color = 'white';
+        randomColor.style.borderColor = 'white';
+    } else {
+        randomColor.style.color = 'black';
+        randomColor.style.borderColor = 'black';
+    }
+});

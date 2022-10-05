@@ -78,6 +78,16 @@ body {
     font-size: 1.2rem;
 }
 
+.options .color div button {
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 1rem;
+    font-weight: bold;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+}
+
 
 /*------------------------------- responsive with Bootstrap 5 breakpoints ------------------------------*/
 @media (min-width: 576px) {
