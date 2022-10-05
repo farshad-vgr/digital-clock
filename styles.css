@@ -78,6 +78,10 @@ body {
     font-size: 1.2rem;
 }
 
+.options .color div input:hover {
+    cursor: pointer;
+}
+
 .options .color div button {
     margin: 0 auto;
     padding: 10px;
@@ -86,6 +90,12 @@ body {
     border-width: 2px;
     border-style: solid;
     border-color: black;
+    transition: filter 0.3s ease-in-out;
+}
+
+.options .color div button:hover {
+    filter: brightness(90%);
+    cursor: pointer;
 }
 
 

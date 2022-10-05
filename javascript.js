@@ -73,7 +73,7 @@ randomColor.addEventListener('click', function () {
     randomColor.style.background = changeColor();
 
     let rangeAverage = (Number(rangeRed.value) + Number(rangeGreen.value) + Number(rangeBlue.value))/3;
-    if (rangeAverage < 100) {
+    if (rangeAverage < 150) {
         randomColor.style.color = 'white';
         randomColor.style.borderColor = 'white';
     } else {
