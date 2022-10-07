@@ -65,11 +65,10 @@ function changeColor() {
 }
 
 randomColor.addEventListener('click', function () {
-    rangeRed.value = Math.floor(Math.random() * 255);
-    rangeGreen.value = Math.floor(Math.random() * 255);
-    rangeBlue.value = Math.floor(Math.random() * 255);
+    rangeRed.value = Math.floor(Math.random() * 256);
+    rangeGreen.value = Math.floor(Math.random() * 256);
+    rangeBlue.value = Math.floor(Math.random() * 256);
 
-    changeColor();
     randomColor.style.background = changeColor();
 
     let rangeAverage = (Number(rangeRed.value) + Number(rangeGreen.value) + Number(rangeBlue.value))/3;
